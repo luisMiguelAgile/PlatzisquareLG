@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
+import { ResaltarDirective } from './directives/resaltar.directives';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResaltarDirective 
   ],
   imports: [
     BrowserModule,FormsModule,
