@@ -6,18 +6,29 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { ResaltarDirective } from './directives/resaltar.directives';
 import { ContarClicksDirective } from './directives/contar-clicks.directives';
+import { Routes, RouterModule } from '@angular/router';
+import { DetalleComponent } from './detalle/detalle.component';
+import { LugaresComponent } from './lugares/lugares.component';
 
+const appRoutes: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'lugares', component: LugaresComponent },
+  { path: 'detalle', component: DetalleComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
     ResaltarDirective,
-    ContarClicksDirective 
+    ContarClicksDirective,
+    DetalleComponent,
+    LugaresComponent
   ],
   imports: [
-    BrowserModule,FormsModule,
+    BrowserModule, FormsModule,
+    RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAnrmfEFY5RF47AzR7SR9TLMO9R7fVSmcA'
-    })
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
