@@ -1,3 +1,20 @@
-<p>
-  detalle works!
-</p>
+<div class="container">
+  <div class="col-md-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <a routerLink="/lugares">
+          <li class="breadcrumb-item active" aria-current="page">Lugares</li>
+        </a>/{{lugar.nombre}}
+      </ol>
+    </nav>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h1 class="card-title">{{lugar.nombre}}</h1>
+        <h6 class="card-subtitle mb-2 text-muted">Distancia: {{lugar.distancia}}</h6>
+        <p class="card-text">Descripción: {{lugar.description}}</p>
+        <p class="card-text">Plan: {{lugar.plan}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
