@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LugaresService } from '../services/lugares.service';
 
 @Component({
   selector: 'app-lugares',
@@ -7,18 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LugaresComponent {
   title = 'platzisquareLG';
-  lugares: any = [
-    { id: 1, plan: 'pagado', cercania: 1, distancia: 1, active: true, nombre: 'Donas la gordita' },
-    { id: 2, plan: 'gratuito', cercania: 2, distancia: 1.8, active: true, nombre: 'Veterinaria huellas' },
-    { id: 3, plan: 'gratuito', cercania: 3, distancia: 5, active: false, nombre: 'Floristeria la x' },
-    { id: 4, plan: 'pagado', cercania: 3, distancia: 10, active: true, nombre: 'PaloMiulato' }
-  ];
-  
+
 
   lat: number = 5.4600145;
   lng: number = -74.342902;
-  constructor() {
+  lugares = null;
 
+  constructor(private lugaresService: LugaresService) {
+    this.lugares = lugaresService.getLugares();
   }
 }
 

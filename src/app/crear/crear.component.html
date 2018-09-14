@@ -1,0 +1,33 @@
+<div class="container">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <a routerLink="/lugares">
+        <li class="breadcrumb-item active" aria-current="page">Lugares</li>
+      </a>/Crear lugares
+    </ol>
+  </nav>
+</div>
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-md-4">
+      <label>Nombre</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.nombre" >
+      <br>
+      <label>Distancia</label>
+      <input type="number" class="form-control" [(ngModel)]="lugar.distancia">
+      <br>
+      <label>cercania</label>
+      <input type="number" class="form-control" [(ngModel)]="lugar.cercania">
+      <br>
+      <label>Descripción</label>
+      <textarea class="form-control" [(ngModel)]="lugar.descripcion"></textarea>
+      <br>
+      <label>Plan</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.plan">
+      <hr>
+      <a class=" btn btn-primary" (click)="guardarLugar()">Enviar</a>
+      <a class=" btn btn-default" routerLink="/lugares">Cancelar</a>
+    </div>
+  </div>
+</div>

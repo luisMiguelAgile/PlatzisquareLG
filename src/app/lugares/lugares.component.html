@@ -5,10 +5,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8">
+      
       <h2>Lugares Cercanos</h2>
+      <button type="button" class="btn btn-primary" routerLink="/crear">Crear un nuevo negocio</button>
       <ul class="list-group">
         <ng-container *ngFor="let lugar of lugares">
-          <a routerLink="/detalle/{{lugar.id}}" [queryParams]="{action: 'view'}"><li class="list-group-item" *ngIf="lugar.active">{{lugar.nombre}}</li></a>
+          <a routerLink="/detalle/{{lugar.id}}" [queryParams]="{action: 'view'}">
+            <li class="list-group-item" *ngIf="lugar.active">{{lugar.nombre}}</li>
+          </a>
         </ng-container>
       </ul>
     </div>
