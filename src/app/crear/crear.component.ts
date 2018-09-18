@@ -6,16 +6,19 @@ import { LugaresService } from '../services/lugares.service';
   templateUrl: './crear.component.html',
   styleUrls: ['./crear.component.css']
 })
-export class CrearComponent  {
+export class CrearComponent {
   lugar: any = {};
-  
-  guardarLugar(){
+
+  guardarLugar() {
+    this.lugar.id = Date.now();
     this.lugaresService.guardarLugar(this.lugar);
+    alert('Negocio guardado con exito');
+    this.lugar = {};
   }
-  constructor(private lugaresService:LugaresService) {
+  constructor(private lugaresService: LugaresService) {
 
-   }
+  }
 
-  
+
 
 }

@@ -8,11 +8,11 @@
   </nav>
 </div>
 <div class="container">
- 
+
   <div class="row">
     <div class="col-md-4">
       <label>Nombre</label>
-      <input type="text" class="form-control" [(ngModel)]="lugar.nombre" >
+      <input type="text" class="form-control" [(ngModel)]="lugar.nombre">
       <br>
       <label>Distancia</label>
       <input type="number" class="form-control" [(ngModel)]="lugar.distancia">
@@ -25,9 +25,21 @@
       <br>
       <label>Plan</label>
       <input type="text" class="form-control" [(ngModel)]="lugar.plan">
+    </div>
+    <div class="col-md-8">
+      <h3>Datos de dirección</h3>
+      <label>Calle y Número</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.calle">
+      <br>
+      <label>Ciudad</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.ciudad">
+      <br>
+      <label>País</label>
+      <input type="text" class="form-control" [(ngModel)]="lugar.pais">
       <hr>
       <a class=" btn btn-primary" (click)="guardarLugar()">Enviar</a>
       <a class=" btn btn-default" routerLink="/lugares">Cancelar</a>
     </div>
+
   </div>
 </div>
